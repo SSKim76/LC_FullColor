@@ -1,0 +1,46 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+RS232_BUFF                                                                        0x0080      10
+rtnMsg                                                                            0x008A       9
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+UART0_DATA                                                                        R3           1
+NDX_232                                                                           R2           1
+RS232_FLAG                                                                        GPIOR0.0  1bit
+RS_Finish_Flag                                                                    GPIOR0.1  1bit
+default_Color                                                                     R5           1
+Tmr_Cnt                                                                           R4           1
+RS232_RS_Limit                                                                    R7           1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+PORT_INIT                                                                         0x00053     34
+timer1_ovf_isr                                                                    0x00075     36
+putString0                                                                        0x00099     16
+usart_rx_isr                                                                      0x000A9     46
+Clear_Set                                                                         0x000D7     11
+CHK_Light                                                                         0x000E2     35
+SELECT_Light                                                                      0x00105     23
+main                                                                              0x0011C     38
+memset                                                                            0x00142     13
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+PORT_INIT                                                                         0x00053     34
+timer1_ovf_isr                                                                    0x00075     36
+putString0                                                                        0x00099     16
+usart_rx_isr                                                                      0x000A9     46
+Clear_Set                                                                         0x000D7     11
+CHK_Light                                                                         0x000E2     35
+SELECT_Light                                                                      0x00105     23
+main                                                                              0x0011C     38
+memset                                                                            0x00142     13

@@ -1,0 +1,13 @@
+VERSION:3 SOURCE_TIMESTAMP:4CE375A2
+NODE:I LEVEL:0 LINE:1 "C:\cvavr\inc\tiny2313.h"
+NODE:I LEVEL:0 LINE:2 "C:\cvavr\inc\stdio.h"
+NODE:I LEVEL:0 LINE:3 "C:\cvavr\inc\delay.h"
+NODE:I LEVEL:0 LINE:4 "C:\cvavr\inc\string.h"
+NODE:I LEVEL:0 LINE:14 "D:\[AVR]\2018.06 - Full_Color_Half_Light_Controller_R03_抗寇贸府\MCU\Code\DEFINE.c"
+NODE:I LEVEL:0 LINE:15 "D:\[AVR]\2018.06 - Full_Color_Half_Light_Controller_R03_抗寇贸府\MCU\Code\PORT_INIT.c"
+NODE:I LEVEL:0 LINE:16 "D:\[AVR]\2018.06 - Full_Color_Half_Light_Controller_R03_抗寇贸府\MCU\Code\TMR.c"
+NODE:I LEVEL:0 LINE:17 "D:\[AVR]\2018.06 - Full_Color_Half_Light_Controller_R03_抗寇贸府\MCU\Code\UART.c"
+NODE:F LEVEL:0 LINE:20 "Clear_Set(void)"
+NODE:F LEVEL:0 LINE:31 "CHK_Light(void)"
+NODE:F LEVEL:0 LINE:53 "SELECT_Light(unsigned char * USER_SELECT)"
+NODE:F LEVEL:0 LINE:71 "main(void)"

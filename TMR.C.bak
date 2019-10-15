@@ -1,0 +1,8 @@
+interrupt [TIM1_OVF] void timer1_ovf_isr(void)
+{
+    // Reinitialize Timer1 value
+    TCNT1H=0xCF2C >> 8;
+    TCNT1L=0xCF2C & 0xff;
+    // Place your code here
+
+}

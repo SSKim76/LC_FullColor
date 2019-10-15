@@ -1,0 +1,119 @@
+;/***********************************************************************************************************
+;
+;		02. Ports initialization
+;
+;***********************************************************************************************************/
+;
+;void PORT_INIT()
+; 0002 0008 {
+
+	.CSEG
+;PCODE: $00000000 VOL: 0
+;PCODE: $00000001 VOL: 0
+; 0002 0009 		// Crystal Oscillator division factor: 1
+; 0002 000A #pragma optsize-
+; 0002 000B CLKPR=(1<<CLKPCE);
+;PCODE: $00000002 VOL: 0
+; 0002 000C CLKPR=(0<<CLKPCE) | (0<<CLKPS3) | (0<<CLKPS2) | (0<<CLKPS1) | (0<<CLKPS0);
+;PCODE: $00000003 VOL: 0
+; 0002 000D #ifdef _OPTIMIZE_SIZE_
+; 0002 000E #pragma optsize+
+; 0002 000F #endif
+; 0002 0010 
+; 0002 0011 
+; 0002 0012 			// Input/Output Ports initialization
+; 0002 0013 // Port A initialization
+; 0002 0014 // Function: Bit2=In Bit1=In Bit0=In
+; 0002 0015 DDRA=(0<<DDA2) | (0<<DDA1) | (0<<DDA0);
+;PCODE: $00000004 VOL: 0
+; 0002 0016 // State: Bit2=T Bit1=T Bit0=T
+; 0002 0017 PORTA=(0<<PORTA2) | (0<<PORTA1) | (0<<PORTA0);
+;PCODE: $00000005 VOL: 0
+; 0002 0018 
+; 0002 0019 // Port B initialization
+; 0002 001A // Function: Bit7=Out Bit6=Out Bit5=Out Bit4=Out Bit3=Out Bit2=Out Bit1=Out Bit0=Out
+; 0002 001B DDRB=(1<<DDB7) | (1<<DDB6) | (1<<DDB5) | (1<<DDB4) | (1<<DDB3) | (1<<DDB2) | (1<<DDB1) | (1<<DDB0);
+;PCODE: $00000006 VOL: 0
+;PCODE: $00000007 VOL: 0
+;PCODE: $00000008 VOL: 0
+;PCODE: $00000009 VOL: 0
+;PCODE: $0000000A VOL: 0
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+;PCODE: $0000000F VOL: 0
+;PCODE: $00000010 VOL: 0
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+;PCODE: $00000014 VOL: 0
+;PCODE: $00000015 VOL: 0
+;PCODE: $00000016 VOL: 0
+;PCODE: $00000017 VOL: 0
+;PCODE: $00000018 VOL: 0
+;PCODE: $00000019 VOL: 0
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+; 0002 001C // State: Bit7=0 Bit6=0 Bit5=0 Bit4=0 Bit3=0 Bit2=0 Bit1=0 Bit0=0
+; 0002 001D PORTB=(0<<PORTB7) | (0<<PORTB6) | (0<<PORTB5) | (0<<PORTB4) | (0<<PORTB3) | (0<<PORTB2) | (0<<PORTB1) | (0<<PORTB0);
+;PCODE: $0000001C VOL: 0
+; 0002 001E 
+; 0002 001F // Port D initialization
+; 0002 0020 // Function: Bit6=In Bit5=In Bit4=Out Bit3=Out Bit2=Out Bit1=In Bit0=In
+; 0002 0021 DDRD=(0<<DDD6) | (0<<DDD5) | (1<<DDD4) | (1<<DDD3) | (1<<DDD2) | (0<<DDD1) | (0<<DDD0);
+;PCODE: $0000001D VOL: 0
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+;PCODE: $00000022 VOL: 0
+;PCODE: $00000023 VOL: 0
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
+;PCODE: $00000026 VOL: 0
+; 0002 0022 // State: Bit6=T Bit5=T Bit4=0 Bit3=0 Bit2=0 Bit1=T Bit0=T
+; 0002 0023 PORTD=(0<<PORTD6) | (0<<PORTD5) | (0<<PORTD4) | (0<<PORTD3) | (0<<PORTD2) | (0<<PORTD1) | (0<<PORTD0);
+;PCODE: $00000027 VOL: 0
+; 0002 0024 
+; 0002 0025 
+; 0002 0026 
+; 0002 0027 			// USART initialization
+; 0002 0028 // Communication Parameters: 8 Data, 1 Stop, No Parity
+; 0002 0029 // USART Receiver: On
+; 0002 002A // USART Transmitter: On
+; 0002 002B // USART Mode: Asynchronous
+; 0002 002C // USART Baud Rate: 9600
+; 0002 002D UCSRA=(0<<RXC) | (0<<TXC) | (0<<UDRE) | (0<<FE) | (0<<DOR) | (0<<UPE) | (0<<U2X) | (0<<MPCM);
+;PCODE: $00000028 VOL: 0
+; 0002 002E UCSRB=(1<<RXCIE) | (0<<TXCIE) | (0<<UDRIE) | (1<<RXEN) | (1<<TXEN) | (0<<UCSZ2) | (0<<RXB8) | (0<<TXB8);
+;PCODE: $00000029 VOL: 0
+;PCODE: $0000002A VOL: 0
+;PCODE: $0000002B VOL: 0
+;PCODE: $0000002C VOL: 0
+;PCODE: $0000002D VOL: 0
+;PCODE: $0000002E VOL: 0
+;PCODE: $0000002F VOL: 0
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+;PCODE: $00000032 VOL: 0
+;PCODE: $00000033 VOL: 0
+;PCODE: $00000034 VOL: 0
+; 0002 002F UCSRC=(0<<UMSEL) | (0<<UPM1) | (0<<UPM0) | (0<<USBS) | (1<<UCSZ1) | (1<<UCSZ0) | (0<<UCPOL);
+;PCODE: $00000035 VOL: 0
+;PCODE: $00000036 VOL: 0
+;PCODE: $00000037 VOL: 0
+;PCODE: $00000038 VOL: 0
+;PCODE: $00000039 VOL: 0
+;PCODE: $0000003A VOL: 0
+; 0002 0030 UBRRH=0x00;
+;PCODE: $0000003B VOL: 0
+; 0002 0031 UBRRL=0x4D;
+;PCODE: $0000003C VOL: 0
+; 0002 0032  #asm("sei")
+;PCODE: $0000003D VOL: 0
+	sei
+;PCODE: $0000003E VOL: 0
+; 0002 0033 }
+;PCODE: $0000003F VOL: 0
+;PCODE: $00000040 VOL: 0
